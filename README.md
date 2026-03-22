@@ -71,7 +71,7 @@ real-estate-fullstack/
 
 ### 1. Clone repo
 
-git clone https://github.com/vidhi4104/real-estate-fullstack.git
+git clone https://github.com/kritikaaa414/real-estate-devops-project.git
 
 ### 2. Go inside project
 
