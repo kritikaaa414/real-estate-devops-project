@@ -73,37 +73,95 @@ real-estate-fullstack/
 
 git clone https://github.com/kritikaaa414/real-estate-devops-project.git
 
-### 2. Go inside project
+### 🔹 2. Run with Docker
 
-cd real-estate-fullstack
+Make sure Docker is installed on your system.
 
-### 3. Run docker
-
+```
 docker compose up --build
-
-### 4. Open in browser
-
-http://localhost:3000
+```
 
 ---
 
-## 📡 API Endpoint
+### 🔹 3. Access Application
 
-http://localhost:5000/api/properties
-
----
-
-## 🎯 DevOps Concepts Used
-
-* Containerization
-* Multi-service architecture
-* Service networking
-* Persistent database setup
-* Environment isolation
-* Build automation
+* Frontend: http://localhost:3000
+* Backend API: http://localhost:5000/properties
 
 ---
 
+## ☁️ Deployment (AWS EC2)
+
+### Steps:
+
+1. Launch EC2 instance (Ubuntu)
+2. Install Docker & Docker Compose
+3. Clone repository
+4. Run:
+
+```
+docker compose up --build -d
+```
+
+5. Open in browser:
+
+```
+http://<your-ec2-public-ip>:3000
+```
+
+---
+
+## 📡 API Endpoints
+
+### GET Properties
+
+```
+GET /properties
+```
+
+### Sample Response
+
+```json
+[
+  {
+    "title": "2BHK Apartment",
+    "location": "Indore",
+    "price": "5000",
+    "image": "img1.jpg"
+  }
+]
+```
+
+---
+
+## 🧪 Database Schema
+
+| Field    | Type    |
+| -------- | ------- |
+| id       | Integer |
+| title    | String  |
+| location | String  |
+| price    | String  |
+| image    | String  |
+
+---
+
+## 🐳 Docker Services
+
+* frontend → React App (Port 3000)
+* backend → Flask API (Port 5000)
+* db → MySQL (Port 3306)
+
+---
 
 
-Aspiring DevOps & Software Engineer
+---
+
+## 📌 Future Improvements
+
+* Add authentication (Login/Signup)
+* Add property filters (price, location)
+* Add image upload feature
+* Deploy using CI/CD pipeline
+
+ & Software Engineer
